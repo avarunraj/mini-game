@@ -289,7 +289,7 @@ function App() {
       {gameOver && (
         <div className="modal-overlay success">
           <div className="game-over-message">
-            <h1>💕 You said YES! 💕</h1>
+            <h1>💕 I love you 💕</h1>
             <p>Together forever! 💑</p>
             <button className="btn btn-restart" onClick={restartGame}>
               Play Again
