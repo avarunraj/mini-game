@@ -15,7 +15,7 @@ const CUTE_MESSAGES = [
   "1st MOVIE DATE - May 7, 2023🥰",
   "1st SLEEP OVER - March 29,2024",
   "SASTI MASTI- Sept 8,2024 🎉",
-  "TOLD MOMMY - April 28,2025 💖",
+  "I TOLD MOMMY - April 28,2025 💖",
   "Now only one date remaining - 2027 👏",
   "Now only one date remaining - 2027 ??? 🎊",
 ];
@@ -270,7 +270,7 @@ function App() {
       {won && (
         <div className="modal-overlay">
           <div className="win-message">
-            <img src="/love.jpeg" alt="Love" className="win-image" />
+            <img src={`${process.env.PUBLIC_URL}/love.jpeg`} alt="Love" className="win-image" />
             <h2>You caught my heart…</h2>
             <h3>Now will you be my Valentine? 💘</h3>
             <div className="button-group">
@@ -302,7 +302,7 @@ function App() {
       {showPleading && (
         <div className="modal-overlay pleading">
           <div className="pleading-message">
-            <img src="/me.jpeg" alt="Pleading" className="pleading-image" />
+            <img src={`${process.env.PUBLIC_URL}/me.jpeg`} alt="Pleading" className="pleading-image" />
             <h2>PRETTY PLEASEEEEE 🥺</h2>
             <button className="btn btn-valentine" onClick={handlePleadingYes}>
               MY VALENTINE FOREVER 💕
