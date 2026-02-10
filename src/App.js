@@ -240,7 +240,7 @@ function App() {
                 height: `${HEART_SIZE}px`,
               }}
             >
-              ❤️
+              💛
             </div>
           ))}
 
