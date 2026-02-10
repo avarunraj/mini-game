@@ -8,15 +8,15 @@ const BASKET_HEIGHT = 60;
 const HEART_SIZE = 40;
 
 const CUTE_MESSAGES = [
-  "PROPOSED -  july 8 ,2019",
-  "DATING  - JULY28 , 2022🥰",
-  "KISS - Feb 6 , 2023🥰",
-  "SHE SAID I LOVE U- May 3 , 2023🥰",
-  "1st MOVIE DATE - May 7, 2023🥰",
+  "PROPOSED -  july 8 ,2019 🥰",
+  "DATING  - JULY28 , 2022 🥰",
+  "KISS - Feb 6 , 2023 🥰",
+  "SHE SAID I LOVE U- May 3 , 2023 🥰",
+  "1st MOVIE DATE - May 7, 2023 🥰",
   "1st SLEEP OVER - March 29,2024",
   "SASTI MASTI- Sept 8,2024 🎉",
   "I TOLD MOMMY - April 28,2025 💖",
-  "Now only one date remaining - 2027 👏",
+  "Now only one date remaining - 2027 ??? 🎊",
   "Now only one date remaining - 2027 ??? 🎊",
 ];
 
