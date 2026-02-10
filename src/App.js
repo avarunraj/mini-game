@@ -28,6 +28,8 @@ function App() {
   const [basketX, setBasketX] = useState(GAME_WIDTH / 2 - BASKET_WIDTH / 2);
   const [message, setMessage] = useState('');
   const [messageId, setMessageId] = useState(0);
+  const [showPleading, setShowPleading] = useState(false);
+  const [showCelebration, setShowCelebration] = useState(false);
 
   // Refs
   const gameLoopRef = useRef();
@@ -183,9 +185,14 @@ function App() {
     setGameOver(true);
   };
 
+  const handlePleadingYes = () => {
+    setShowPleading(false);
+    setShowCelebration(true);
+  };
+
   const handleNo = () => {
-    // Run away animation
-    setBasketX(Math.random() * (GAME_WIDTH - BASKET_WIDTH));
+    // Show pleading screen instead of running away
+    setShowPleading(true);
   };
 
   const restartGame = () => {
@@ -197,6 +204,8 @@ function App() {
     heartIdRef.current = 0;
     caughtHeartsRef.current.clear();
     messageIndexRef.current = 0;
+    setShowPleading(false);
+    setShowCelebration(false);
   };
 
   const won = score >= 10 && !gameOver;
@@ -285,6 +294,40 @@ function App() {
             <button className="btn btn-restart" onClick={restartGame}>
               Play Again
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* Pleading Screen */}
+      {showPleading && (
+        <div className="modal-overlay pleading">
+          <div className="pleading-message">
+            <img src="/me.jpeg" alt="Pleading" className="pleading-image" />
+            <h2>PRETTY PLEASEEEEE 🥺</h2>
+            <button className="btn btn-valentine" onClick={handlePleadingYes}>
+              MY VALENTINE FOREVER 💕
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Celebration Screen */}
+      {showCelebration && (
+        <div className="modal-overlay celebration">
+          <div className="celebration-message">
+            <h1>🎉 YES!!! 💕 🎉</h1>
+            <p>You made me the happiest! 🥰</p>
+            <p>I love you so much! 💑✨</p>
+            <button className="btn btn-restart" onClick={restartGame}>
+              Play Again
+            </button>
+            <div className="confetti">
+              {[...Array(20)].map((_, i) => (
+                <span key={i} className="confetti-piece">
+                  {['💕', '🎉', '✨', '💑'][Math.floor(Math.random() * 4)]}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       )}
